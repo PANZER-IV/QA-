@@ -1,0 +1,305 @@
+>
+    
+        
+            
+                <h1>帮助中心</h1>
+            
+            
+    
+        
+        
+        
+        
+    
+    
+
+    
+
+<script src="//img.huaweicloud.com/static/js/v2/jquery-1.11.3.min.js"></script>
+<script>
+ var hot_ajax_url = 'https://portal.huaweicloud.com/api/search/hot';
+var site_search_url = 'http://www.huaweicloud.com';
+            
+        $('.searchInput').keyup(function(){
+            var SearchUrl = $(".search-inner").data("href");
+            $('.search-inner').attr('href',SearchUrl+$.base64.urlSafeEncode($('.searchInput').val(),true))
+        })
+        $(".searchInput").keydown(function (event) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if (e && e.keyCode == 13) {
+                $(this).siblings(".search-inner")[0].click() 
+            }
+        })
+
+
+</script>
+        
+    
+    
+    
+        <li data-name=" ">
+            
+        </li>
+        <li class="active" data-name=" ">
+            
+        </li>
+        <li data-name=" ">
+            
+        </li>
+    
+
+
+    
+        
+            新手指南
+            <p>我们为您提供的华为云新手指南包括初级篇和进阶篇，将帮助您快速认识和应用华为云服务。初级篇将介绍使用华为 企云服务的五个步骤，包括获取账号、挑选服务、购买服务、支付费用和使用业务。进阶篇将介绍如何使用华为云搭建网站业 务，帮助您使用华为云服务在实际应用场景中部署应用。</p>
+        
+        
+            
+                
+                    
+                        
+                            
+                            <h3 class="caption">初级篇</h3>
+                            <p class="title">使用华为云只需五步</p>
+                            <p class="text">初级篇将介绍使用华为云企业服务的五个步骤，包括获取账户、挑选服务、购买服务、支付费用和使用业务。</p>
+                            
+                        
+                    
+                    
+                        
+                                
+                            <h3 class="caption">进阶篇</h3>
+                            <p class="title">使用华为云搭建网站业务</p>
+                            <p class="text">进阶篇将介绍如何使用华为云搭建网站业务，帮助您使用华为云服务在实际场景应用中的部署应用。</p>
+                            
+                        
+                    
+                    
+                        
+                            
+                            <h3 class="caption">产品入门</h3>
+                            <p class="title">通信平台云入门操作指引</p>
+                            <p class="text">以在线培训应用场景为例</p>
+                            
+                        
+                    
+                
+            
+        
+        指引向导
+        
+            
+                <li class="active" data-name="text1">我要购买</li>
+                <li data-name="text2" class="">ECS使用指南</li>
+                <!--<li data-name="text3" class="">对象存储服务</li>-->
+                <li data-name="text4" class="">我要备案</li>
+            
+            
+                    
+                    
+                        
+                        
+                            1
+                            注册/登录
+                            
+                        
+                        
+                            
+                            
+                        
+                    
+                    
+                        
+                        
+                            2
+                            规格选型
+                            
+                        
+                        
+                            
+                            
+                        
+                    
+                    
+                        
+                        
+                            3
+                            支付
+                            
+                        
+                        
+                            
+                        
+                    
+                    
+                        
+                        
+                            4
+                            完成
+                        
+                        
+                            
+                            
+                        
+                    
+
+                
+                    
+                    
+                        
+                        
+                            1
+                            登录云服务器
+                            
+                        
+                        
+                            
+                            
+                        
+                    
+                    
+                        
+                        
+                            2
+                            重置密码
+                            
+                        
+                        
+                            
+                        
+                    
+                    
+                        
+                        
+                            3
+                            主机基本操作
+                            
+                        
+                        
+                            
+                            
+                        
+                    
+                    
+                        
+                        
+                            4
+                            ECS操作须知
+                        
+                        
+                            
+                            
+                        
+                    
+                
+                <!--    -->
+                <!--    -->
+                <!--        -->
+                <!--        -->
+                <!--            1-->
+                <!--            登录和安装OBS客户端-->
+                <!--            -->
+                <!--        -->
+                <!--        -->
+                <!--            -->
+                <!--            -->
+                <!--        -->
+                <!--    -->
+                <!--    -->
+                <!--        -->
+                <!--        -->
+                <!--            2-->
+                <!--            OBS基本操作-->
+                <!--            -->
+                <!--        -->
+                <!--        -->
+                <!--            -->
+                <!--            -->
+                <!--        -->
+                <!--    -->
+                <!--    -->
+                <!--        -->
+                <!--        -->
+                <!--            3-->
+                <!--            桶管理-->
+                <!--            -->
+                <!--        -->
+                <!--        -->
+                <!--            -->
+                <!--            -->
+                <!--        -->
+                <!--    -->
+                <!--    -->
+                <!--        -->
+                <!--        -->
+                <!--            4-->
+                <!--            对象管理-->
+                <!--        -->
+                <!--        -->
+                <!--            -->
+                <!--            -->
+                <!--        -->
+                <!--    -->
+                <!---->
+                    
+                    
+                        
+                        
+                            1
+                            IP所属机房判断
+                            
+                        
+                        
+                            
+                        
+                    
+                    
+                        
+                        
+                            2
+                            华北区域备案指导
+                            
+                        
+                        
+                            
+                        
+                    
+                    
+                        
+                        
+                            3
+                            准备材料
+                            
+                        
+                        
+                            
+                        
+                    
+                    
+                        
+                        
+                            4
+                            等待管局审核
+                            
+                        
+                        
+                            
+                        
+                    
+                    
+                        
+                        
+                            5
+                            备案成功
+                        
+                        
+                            <p title="备案成功，请妥善保管备案号和备案密码，以便以后修改备案信息和增加网站时用。">备案成功，请妥善保管备案号和备案密码...</p>
+                        
+                    
+                
+            
+        
+    
+
+    
