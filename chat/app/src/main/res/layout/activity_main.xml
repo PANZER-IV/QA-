@@ -11,14 +11,14 @@
         android:id="@+id/chat_top"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-         >
+        android:background="#3A4449" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="智能问答"
-            android:textColor="#6e6969"
+            android:textColor="#ffffff"
             android:textSize="18sp" />
     </RelativeLayout>
 
@@ -41,7 +41,7 @@
             android:gravity="center" />
 
         <Button
-            android:background="@drawable/shape"
+            android:background="@drawable/btnborder"
             android:id="@+id/chat_send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/chat_input_message"
             android:text="发送"
-            android:textColor="#6e6969"
+            android:textColor="#FFFFFF"
             android:textSize="18sp" />
     </RelativeLayout>
 

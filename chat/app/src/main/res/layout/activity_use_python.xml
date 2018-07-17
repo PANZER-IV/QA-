@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background01"
     android:orientation="vertical"
     tools:context="com.example.a31284.chatqa.UsePythonActivity">
 <Button
@@ -12,8 +11,6 @@
     android:layout_height="wrap_content"
     android:id="@+id/train"
     android:onClick="train_data"
-    android:textSize="20dp"
-    android:background="@drawable/shape"
     android:text="训练文档"
     />
     <TextView

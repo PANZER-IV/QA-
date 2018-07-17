@@ -3,26 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background02"
     android:orientation="vertical"
     tools:context="com.example.a31284.chatqa.ShowUserInfoActivity">
-
     <Button
-        android:layout_gravity="center|"
-        android:id="@+id/clickTodshow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape"
-        android:onClick="clickToshow"
+        android:id="@+id/clickTodshow"
         android:text="点击显示个人信息"
-        android:textColor="#6e6969"
-        android:textSize="25dp" />
+        android:onClick="clickToshow"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/show_username"
-        android:textSize="20dp"
-        />
+        android:id="@+id/show_username"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

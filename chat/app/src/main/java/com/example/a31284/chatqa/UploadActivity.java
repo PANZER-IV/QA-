@@ -13,8 +13,6 @@ import android.os.Message;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -55,12 +53,9 @@ public class UploadActivity extends AppCompatActivity {
     }
 
     public void filePicker(View view) {
-        Intent intent=new Intent(UploadActivity.this,FileManageActivity.class);
+        Intent intent=new Intent(UploadActivity.this,FileExplorerActivity.class);
         startActivity(intent);
     }
-
-
-
 
     public void fileupload(View view){
         File file = new File (apkPath);
@@ -93,33 +88,4 @@ public class UploadActivity extends AppCompatActivity {
 
         }
     }
-
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu,menu);
-        return true;
-    }
-
-    public boolean onOptionsItemSelected(MenuItem item){
-        Intent intent;
-        switch (item.getItemId()){
-            case R.id.PersonalInfo:
-               intent=new Intent(UploadActivity.this,ShowUserInfoActivity.class);
-               intent.putExtra("username",username);
-               startActivity(intent);
-               break;
-            case R.id.userfiles:
-                intent=new Intent(UploadActivity.this,FileManageActivity.class);
-                intent.putExtra("username",username);
-                startActivity(intent);
-                break;
-            case R.id.qamanager:
-                intent=new Intent(UploadActivity.this,QAManagerActivity.class);
-                intent.putExtra("username",username);
-                startActivity(intent);
-                break;
-
-        }
-        return true;
-    }
-
 }
