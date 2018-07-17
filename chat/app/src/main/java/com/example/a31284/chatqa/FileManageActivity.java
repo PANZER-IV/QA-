@@ -5,6 +5,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -31,7 +33,7 @@ public class FileManageActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         //username="user1";
         username = extras.getString("username");
-        Toast.makeText(getApplicationContext(),"预处理需要十五分钟左右~",Toast.LENGTH_LONG).show();
+
     }
 
     Handler handler=new Handler(){//消息机制，用来在子线程中更新UI
@@ -89,7 +91,7 @@ public class FileManageActivity extends AppCompatActivity {
                 }
             }
         }.start();//不要忘记开线程
-
+        Toast.makeText(getApplicationContext(),"预处理需要十五分钟左右~",Toast.LENGTH_LONG).show();
     }
 
 
@@ -98,4 +100,34 @@ public class FileManageActivity extends AppCompatActivity {
         intent.putExtra("username",username);
         startActivity(intent);
     }
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        Intent intent;
+        switch (item.getItemId()){
+            case R.id.PersonalInfo:
+                intent=new Intent(FileManageActivity.this,ShowUserInfoActivity.class);
+                intent.putExtra("username",username);
+                startActivity(intent);
+                break;
+            case R.id.userfiles:
+                intent=new Intent(FileManageActivity.this,FileManageActivity.class);
+                intent.putExtra("username",username);
+                startActivity(intent);
+                break;
+            case R.id.qamanager:
+                intent=new Intent(FileManageActivity.this,QAManagerActivity.class);
+                intent.putExtra("username",username);
+                startActivity(intent);
+                break;
+
+        }
+        return true;
+    }
+
+
 }

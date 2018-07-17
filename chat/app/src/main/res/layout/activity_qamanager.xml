@@ -5,14 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background02"
     tools:context="com.example.a31284.chatqa.QAManagerActivity">
     <LinearLayout
         android:orientation="horizontal"
+        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="22dp"
             android:text="问题："
             />
         <EditText
@@ -24,11 +27,13 @@
 
     <LinearLayout
         android:orientation="horizontal"
+        android:layout_marginTop="45dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="22dp"
             android:text="答案："
             />
         <EditText
@@ -41,29 +46,42 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:orientation="horizontal"
         >
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/shape"
             android:id="@+id/add"
             android:onClick="add"
             android:text="add"
+            android:textSize="20dp"
+            android:textColor="#6e6969"
             />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
             android:id="@+id/delete"
             android:onClick="delete"
             android:text="delete"
+            android:textSize="20dp"
+            android:background="@drawable/shape"
+            android:textColor="#6e6969"
             />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/shape"
+            android:textSize="20dp"
             android:text="find"
             android:id="@+id/check"
             android:onClick="check"
+            android:textColor="#6e6969"
             />
     </LinearLayout>
 

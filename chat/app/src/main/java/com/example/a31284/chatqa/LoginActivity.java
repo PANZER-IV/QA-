@@ -7,6 +7,7 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -25,6 +26,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText password;
     private String usernameStr;
     private String passwordStr;
+    private Button login;
+    private Button rgs;
     private final int LOGINSUCCESS=0;
     private final int LOGINNOTFOUND=1;
     private final int LOGINEXCEPT=2;
@@ -39,6 +42,11 @@ public class LoginActivity extends AppCompatActivity {
             switch (msg.what){//具体消息，具体显示
                 case LOGINSUCCESS:
                     Toast.makeText(getApplicationContext(),(String)msg.obj,Toast.LENGTH_LONG).show();
+                    if(msg.obj.equals("登录成功")){
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        intent.putExtra("username", usernameStr);
+                        startActivity(intent);
+                    }
                     break;
                 case LOGINNOTFOUND:
                     Toast.makeText(getApplicationContext(),(String)msg.obj,Toast.LENGTH_LONG).show();
@@ -67,7 +75,10 @@ public class LoginActivity extends AppCompatActivity {
         //找到我们需要的控件
         username = (EditText) findViewById(R.id.et_username);
         password = (EditText) findViewById(R.id.et_password);
-
+        login=(Button)findViewById(R.id.bt_login);
+        rgs=(Button)findViewById(R.id.bt_register);
+        //login.getBackground().setAlpha(100);
+        //rgs.getBackground().setAlpha(100);
 
     }
     //登录按钮的点击事件，也可以用set监听器的方法，不过这种方法简单
@@ -105,9 +116,12 @@ public class LoginActivity extends AppCompatActivity {
                             message.what=LOGINSUCCESS;//用来标志是哪个消息
                             message.obj=str;//消息主体
                             handler.sendMessage(message);
-                            intent=new Intent(LoginActivity.this,MainActivity.class);
-                            intent.putExtra("username",usernameStr);
-                            startActivity(intent);
+
+//                            }else{
+//                                message.what=LOGINNOTFOUND;
+//                                message.obj="登录失败";
+//                                handler.sendMessage(message);
+//                            }
                         }
                         else {
                             Message message = Message.obtain();
