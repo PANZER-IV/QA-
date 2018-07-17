@@ -7,7 +7,6 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -26,8 +25,6 @@ public class LoginActivity extends AppCompatActivity {
     private EditText password;
     private String usernameStr;
     private String passwordStr;
-    private Button login;
-    private Button rgs;
     private final int LOGINSUCCESS=0;
     private final int LOGINNOTFOUND=1;
     private final int LOGINEXCEPT=2;
@@ -70,10 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         //找到我们需要的控件
         username = (EditText) findViewById(R.id.et_username);
         password = (EditText) findViewById(R.id.et_password);
-        login=(Button)findViewById(R.id.bt_login);
-        rgs=(Button)findViewById(R.id.bt_register);
-        //login.getBackground().setAlpha(100);
-        //rgs.getBackground().setAlpha(100);
+
 
     }
     //登录按钮的点击事件，也可以用set监听器的方法，不过这种方法简单
