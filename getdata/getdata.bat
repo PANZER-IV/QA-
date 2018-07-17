@@ -1,1 +1,0 @@
-E:\Sofewave\python\python.exe pachong.py
