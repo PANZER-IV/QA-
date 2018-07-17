@@ -118,8 +118,8 @@ public class PythonUtils {
 			proc.waitFor();// 等待命令执行完成
 
 			// 打印流信息
-			 //System.out.println(outStream.toString());
-			// System.out.println(outerrStream.toString());
+			System.out.println(outStream.toString());
+		    System.out.println(outerrStream.toString());
 
 			String result = outStream.toString();
 			//if (proc.waitFor() == 0) {

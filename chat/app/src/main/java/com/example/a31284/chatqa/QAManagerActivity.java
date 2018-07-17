@@ -5,6 +5,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -196,4 +198,33 @@ public class QAManagerActivity extends AppCompatActivity {
         }.start();//不要忘记开线程
 
     }
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        Intent intent;
+        switch (item.getItemId()){
+            case R.id.PersonalInfo:
+                intent=new Intent(QAManagerActivity.this,ShowUserInfoActivity.class);
+                intent.putExtra("username",username);
+                startActivity(intent);
+                break;
+            case R.id.userfiles:
+                intent=new Intent(QAManagerActivity.this,FileManageActivity.class);
+                intent.putExtra("username",username);
+                startActivity(intent);
+                break;
+            case R.id.qamanager:
+                intent=new Intent(QAManagerActivity.this,QAManagerActivity.class);
+                intent.putExtra("username",username);
+                startActivity(intent);
+                break;
+
+        }
+        return true;
+    }
+
 }

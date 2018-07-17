@@ -3,22 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background02"
     android:orientation="vertical"
     tools:context="com.example.a31284.chatqa.ShowUserInfoActivity">
-    <Button
-        android:layout_width="wrap_content"
+
+    <TextView
+        android:background="@drawable/show_info_shape"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/clickTodshow"
-        android:text="点击显示个人信息"
-        android:onClick="clickToshow"
+        android:id="@+id/show_username"
+        android:textSize="20dp"
         />
     <TextView
+        android:background="@drawable/show_info_shape"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/show_username"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/show_files"/>
+        android:id="@+id/show_files"
+        android:textSize="20dp"
+        />
 
+    <Button
+        android:id="@+id/clickTodshow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape"
+        android:onClick="clickToshow"
+        android:text="show"
+        android:textColor="#6e6969"
+        android:textSize="25dp" />
 </LinearLayout>

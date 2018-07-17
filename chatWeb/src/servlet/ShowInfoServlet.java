@@ -33,11 +33,11 @@ public class ShowInfoServlet extends HttpServlet {
 		HashMap<String,Integer> answerfilemap=new HashMap<String,Integer>();
 		
 		FileUtils f=new FileUtils();
-		questionfilemap=f.getFileName("D:/java/chatWeb/question");
-		answerfilemap=f.getFileName("D:/java/chatWeb/answer");
+		questionfilemap=f.getFileName("D:/java/chatWeb/"+username);
+		//answerfilemap=f.getFileName("D:/java/chatWeb/"+username);
 		
 		ArrayList qlist=new ArrayList();
-		ArrayList alist=new ArrayList();
+		//ArrayList alist=new ArrayList();
 		
 		
 		for(String key:questionfilemap.keySet()) {
@@ -45,22 +45,22 @@ public class ShowInfoServlet extends HttpServlet {
 			qlist.add(key);
 		}
 		
-		for(String key:answerfilemap.keySet()) {
-			//System.out.println(key+":"+answerfilemap.get(key));
-			alist.add(key);
-		}
+//		for(String key:answerfilemap.keySet()) {
+//			//System.out.println(key+":"+answerfilemap.get(key));
+//			alist.add(key);
+//		}
 		
 		if("4".equals(sign)) {
 			String filesInfo="*",filesInfo1="*";
-			for(int j=0;j<alist.size();j++) {
+			for(int j=0;j<qlist.size();j++) {
 				filesInfo=qlist.get(j)+"\n"+filesInfo;
 			}
-			for(int j=0;j<alist.size();j++) {
-				filesInfo1=alist.get(j)+"\n"+filesInfo1;
-			}
+//			for(int j=0;j<alist.size();j++) {
+//				filesInfo1=alist.get(j)+"\n"+filesInfo1;
+//			}
 			//String loginInfo="我就试试看能不能传过去";
-			System.out.println("question:\n"+filesInfo+"\n"+"answer:\n"+filesInfo1);
-			out.print("question:\n"+filesInfo+"\n"+"answer:\n"+filesInfo1);
+			System.out.println(filesInfo);
+			out.print(filesInfo+"\n");
 			//out.print("answer:\n"+filesInfo1);
 		}
 		System.out.println(sign);

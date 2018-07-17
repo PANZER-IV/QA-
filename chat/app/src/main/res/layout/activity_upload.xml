@@ -3,16 +3,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background02"
     tools:context="com.example.a31284.chatqa.UploadActivity"
     android:orientation="vertical">
-    <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:onClick="filePicker" android:text="选择文件" android:id="@+id/filePicker"/>
 
-    <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/apkPathText" android:hint="请输入文件路径"/>
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:textSize="18dp"
+        android:onClick="back"
+        android:id="@+id/apkPathText"
+        android:hint="文件路径"/>
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="fileupload"
-        android:id="@+id/upload"
-        android:text="上传文件"/>
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp">
+
+        <Button
+            android:id="@+id/filePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:textSize="20dp"
+            android:background="@drawable/shape"
+            android:onClick="filePicker"
+            android:text="选择文件"
+            android:textColor="#6e6969"/>
+
+        <Button
+            android:id="@+id/upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="85dp"
+            android:textSize="20dp"
+            android:background="@drawable/shape"
+            android:onClick="fileupload"
+            android:text="上传文件"
+            android:textColor="#6e6969"/>
+
+    </LinearLayout>
 </LinearLayout>

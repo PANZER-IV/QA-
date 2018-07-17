@@ -5,6 +5,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -31,14 +33,14 @@ public class ShowUserInfoActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         //username="user1";
         username = extras.getString("username");
-        show_username.setText(username);
+        show_username.setText("用户名："+username);
     }
     Handler handler=new Handler(){//消息机制，用来在子线程中更新UI
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what){//具体消息，具体显示
                 case SHOWINFOSUCCESS:
-                    show_files.setText((String)msg.obj);
+                    show_files.setText("已上传文档：\n"+(String)msg.obj);
                     Toast.makeText(getApplicationContext(),(String)msg.obj,Toast.LENGTH_LONG).show();
                     break;
                 case SHOWINFONOTFOUND:
@@ -90,4 +92,33 @@ public class ShowUserInfoActivity extends AppCompatActivity {
             }.start();//不要忘记开线程
 
     }
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        Intent intent;
+        switch (item.getItemId()){
+//            case R.id.PersonalInfo:
+//                intent=new Intent(MainActivity.this,ShowUserInfoActivity.class);
+//                intent.putExtra("username",username);
+//                startActivity(intent);
+//                break;
+            case R.id.userfiles:
+                intent=new Intent(ShowUserInfoActivity.this,FileManageActivity.class);
+                intent.putExtra("username",username);
+                startActivity(intent);
+                break;
+            case R.id.qamanager:
+                intent=new Intent(ShowUserInfoActivity.this,QAManagerActivity.class);
+                intent.putExtra("username",username);
+                startActivity(intent);
+                break;
+
+        }
+        return true;
+    }
+
 }

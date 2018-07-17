@@ -27,15 +27,16 @@ public class LoginServlet extends HttpServlet {
 		PrintWriter out=response.getWriter();
 		
 		//把传来的数据封装进javabean中
-//		User user=new User();
-//		user.setUsername(username);
-//		user.setPassword(password);
-//		UserService service=new UserServiceImpl();
+		User user=new User();
+		user.setUsername(username);
+		user.setPassword(password);
+		UserService service=new UserServiceImpl();
 		if("1".equals(sign)) {//登录操作(设置了一个标记)
-//			String loginInfo=service.checkLogin(user);
-//			out.print(loginInfo);
-			if(username.equals("user1")&&password.equals("123456"));
-			out.print("登录成功");
+			String loginInfo=service.checkLogin(user);
+			out.print(loginInfo);
+//			if(username.equals("user1")&&password.equals("123456")) {
+//			out.print("登录成功");
+			//}
 		}
 		else if("2".equals(sign)) {//注册操作
 //			String registerInfo=service.register(user);
