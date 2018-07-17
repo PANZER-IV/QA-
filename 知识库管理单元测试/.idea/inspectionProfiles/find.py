@@ -64,7 +64,7 @@ class QA(object):
                 #print("删除成功")
                 return 1
             else:
-                #print("QA对不存在")
+               # print("QA对不存在")
                 return 2
         elif logo == 2:
             if get_i != -1:

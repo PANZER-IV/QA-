@@ -2,7 +2,7 @@
 
 import unittest
 from find import *
-class TestMathFunc(unittest.TestCase):
+class Test(unittest.TestCase):
     """Test mathfuc.py"""
 
     def test(self):
@@ -40,11 +40,19 @@ class TestMathFunc(unittest.TestCase):
             user.aswer_message=user.X[i]
             get_i = user.find()
             self.assertEqual(2, user.logo_choose(user.logo, get_i))
-        user.logo=0
+
+
+    def blank_test(self):
+        user = QA(3, "question.txt", "answer.txt", "html_li.txt", "newquestion", "newanswer")
+        user.get_data()
+        user.rewrite()
         self.assertEqual(-1, user.logo_choose(user.logo, get_i))
         user.logo = "suiji"
         self.assertEqual(-1, user.logo_choose(user.logo, get_i))
-
+        user.logo = 999
+        self.assertEqual(-1, user.logo_choose(user.logo, get_i))
+        user.logo = " "
+        self.assertEqual(-1, user.logo_choose(user.logo, get_i))
 
 if __name__ == '__main__':
     unittest.main()
