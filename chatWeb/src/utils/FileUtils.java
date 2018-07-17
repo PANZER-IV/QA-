@@ -18,10 +18,14 @@ public class FileUtils {
 	    for (int i = 0; i < fa.length; i++) {
 	      File fs = fa[i];
 	      if (fs.isDirectory()) {
-	        System.out.println(fs.getName() + " [Ŀ¼]");
+	       // System.out.println(fs.getName() + " [Ŀ¼]");
 	      } else {
-	        System.out.println(fs.getName());
-	        filemap.put(fs.getName(),0);
+	        //System.out.println(fs.getName());
+	        if(fs.getName().indexOf("txt")>-1) {
+	        	System.out.println(fs.getName()+"?????");
+	        	filemap.put(fs.getName(),0);
+	        }
+	        
 	      }
 	    }
 	    return filemap;

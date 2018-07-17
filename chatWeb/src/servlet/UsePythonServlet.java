@@ -55,6 +55,7 @@ class Work extends Thread{
 			String question=request.getParameter("question");
 			String predict2_savepath="d:/java/chatWeb/"+username;
 	   	    //String predict_q="应用场景容器集群管理";
+			System.out.println(predict2_savepath);
 			String cmd3="python D:\\pycham\\prepare_process\\Src\\predict2.py"
 			    	 +" "+predict2_savepath+" "+question;
 							
